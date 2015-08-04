@@ -161,7 +161,8 @@ class BootstrapFormBuilder extends FormBuilder
      */
     public function checkbox($name, $value = 1, $label = null, $checked = null, $options = [])
     {
-        $checkable = parent::checkbox($name, $value, $checked, $options);
+        $prefix = ($value == 1) ? $this->hidden('name', '0') : '';
+        $checkable = $prefix . parent::checkbox($name, $value, $checked, $options);
 
         return $this->wrapCheckable($label, 'checkbox', $checkable);
     }
@@ -197,7 +198,8 @@ class BootstrapFormBuilder extends FormBuilder
      */
     public function inlineCheckbox($name, $value = 1, $label = null, $checked = null, $options = [])
     {
-        $checkable = parent::checkbox($name, $value, $checked, $options);
+        $prefix = ($value == 1) ? $this->hidden('name', '0') : '';
+        $checkable = $prefix . parent::checkbox($name, $value, $checked, $options);
 
         return $this->wrapInlineCheckable($label, 'checkbox', $checkable);
     }
@@ -351,6 +353,6 @@ class BootstrapFormBuilder extends FormBuilder
      */
     private function wrapInlineCheckable($label, $type, $checkable)
     {
-        return '<div class="' . $type . '-inline">' . $checkable . ' ' . $label . '</div>';
+        return '<div class="' . $type . '-inline"><label>' . $checkable . ' ' . $label . '</label></div>';
     }
 }
