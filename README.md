@@ -11,7 +11,7 @@ This FormBuilder enhances the [Laravel Collective FormBuilder](https://github.co
 
 ## Installation
 
-	$> composer require "rokde/laravel-bootstrap-formbuilder:0.0.1"
+	$> composer require "rokde/laravel-bootstrap-formbuilder:0.0.2"
 
 	$> composer update
 
