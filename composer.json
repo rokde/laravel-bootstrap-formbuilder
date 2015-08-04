@@ -1,0 +1,21 @@
+{
+    "name": "rokde/laravel-bootstrap-formbuilder",
+    "description": "Laravel 5 FormBuilder for Blade Engine and the Twitter Bootstrap CSS Framework",
+    "require": {
+        "laravelcollective/html": "~5.1",
+        "illuminate/support": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rokde\\LaravelBootstrap\\Html\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rokde",
+            "email": "github@mail.robert-kummer.de"
+        }
+    ],
+    "minimum-stability": "stable"
+}
