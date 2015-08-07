@@ -278,7 +278,7 @@ class BootstrapFormBuilder extends FormBuilder
             $classes[] = 'btn-default';
         }
 
-        $options['class'] = implode(' ', $classes);
+        $options['class'] = trim(implode(' ', $classes));
 
         return $this->plainInput('submit', null, $value, $options);
     }
