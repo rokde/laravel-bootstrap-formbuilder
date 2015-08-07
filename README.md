@@ -2,7 +2,7 @@
 
 Laravel 5.1 FormBuilder for Blade Engine and the Twitter Bootstrap CSS Framework.
 
-[![Latest Stable Version](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/v/stable.svg)](https://packagist.org/packages/rokde/gsales-api-client) [![Latest Unstable Version](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/v/unstable.svg)](https://packagist.org/packages/rokde/gsales-api-client) [![License](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/license.svg)](http://rok.mit-license.org/) [![Total Downloads](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/downloads.svg)](https://packagist.org/packages/rokde/gsales-api-client)
+[![Latest Stable Version](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/v/stable.svg)](https://packagist.org/packages/rokde/laravel-bootstrap-formbuilder) [![Latest Unstable Version](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/v/unstable.svg)](https://packagist.org/packages/rokde/laravel-bootstrap-formbuilder) [![License](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/license.svg)](http://rok.mit-license.org/) [![Total Downloads](https://poser.pugx.org/rokde/laravel-bootstrap-formbuilder/downloads.svg)](https://packagist.org/packages/rokde/laravel-bootstrap-formbuilder)
 
 
 This FormBuilder enhances the [Laravel Collective FormBuilder](https://github.com/LaravelCollective/html) for its use
