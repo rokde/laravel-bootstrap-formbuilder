@@ -262,7 +262,23 @@ class BootstrapFormBuilder extends FormBuilder
      */
     public function submit($value = null, $options = [])
     {
-        $options['class'] = 'btn btn-default' . (isset($options['class']) ? ' ' . $options['class'] : '');
+        $classes = explode(' ', isset($options['class']) ? $options['class'] : '');
+
+        if ( ! in_array('btn', $classes)) {
+            $classes[] = 'btn';
+        }
+        if ( ! in_array('btn-default', $classes)
+            && ! in_array('btn-primary', $classes)
+            && ! in_array('btn-success', $classes)
+            && ! in_array('btn-info', $classes)
+            && ! in_array('btn-warning', $classes)
+            && ! in_array('btn-danger', $classes)
+            && ! in_array('btn-link', $classes)
+        ) {
+            $classes[] = 'btn-default';
+        }
+
+        $options['class'] = implode(' ', $classes);
 
         return $this->plainInput('submit', null, $value, $options);
     }
