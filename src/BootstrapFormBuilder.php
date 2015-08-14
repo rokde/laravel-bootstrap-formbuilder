@@ -253,6 +253,71 @@ class BootstrapFormBuilder extends FormBuilder
     }
 
     /**
+     * Create a date input field.
+     *
+     * @param  string $name
+     * @param  string $value
+     * @param  array  $options
+     *
+     * @return string
+     */
+    public function date($name, $value = null, $options = [])
+    {
+        $value = $this->getValueAttribute($name, $value);
+
+        if($value instanceof \DateTime)
+        {
+            $value = $value->format('Y-m-d');
+        }
+
+        return $this->input('date', $name, $value, $options);
+    }
+
+    /**
+     * Create a time input field.
+     *
+     * @param  string $name
+     * @param  string $value
+     * @param  array  $options
+     *
+     * @return string
+     */
+    public function time($name, $value = null, $options = [])
+    {
+        $value = $this->getValueAttribute($name, $value);
+
+        if($value instanceof \DateTime)
+        {
+            $value = $value->format('H:i');
+        }
+
+        return $this->input('time', $name, $value, $options);
+    }
+
+    /**
+     * Create a date and a time input field.
+     *
+     * @param  string $name
+     * @param  string $value
+     * @param  array  $options
+     *
+     * @return string
+     */
+    public function datetime($name, $value = null, $options = [])
+    {
+        $value = $this->getValueAttribute($name, $value);
+
+        $timeValue = $dateValue = null;
+        if($value instanceof \DateTime)
+        {
+            $dateValue= $value->format('Y-m-d');
+            $timeValue = $value->format('H:i');
+        }
+
+        return $this->date($name.'[date]', $dateValue, $options) . $this->time($name.'[time]', $timeValue, $options);
+    }
+
+    /**
      * Create a submit button element.
      *
      * @param  string $value
