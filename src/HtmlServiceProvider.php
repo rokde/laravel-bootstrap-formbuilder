@@ -31,7 +31,7 @@ class HtmlServiceProvider extends ServiceProvider
         $this->registerFormBuilder();
 
         $this->app->alias('html', 'Collective\Html\HtmlBuilder');
-        $this->app->alias('form', 'App\Html\BootstrapFormBuilder');
+        $this->app->alias('form', 'Rokde\LaravelBootstrap\Html\BootstrapFormBuilder');
     }
 
     /**
@@ -67,6 +67,6 @@ class HtmlServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['html', 'form', 'Collective\Html\HtmlBuilder', 'App\Html\BootstrapFormBuilder'];
+        return ['html', 'form', 'Collective\Html\HtmlBuilder', 'Rokde\LaravelBootstrap\Html\BootstrapFormBuilder'];
     }
 }
