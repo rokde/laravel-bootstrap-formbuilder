@@ -2,8 +2,8 @@
     "name": "rokde/laravel-bootstrap-formbuilder",
     "description": "Laravel 5 FormBuilder for Blade Engine and the Twitter Bootstrap CSS Framework",
     "require": {
-        "laravelcollective/html": "^5.1",
-        "illuminate/support": "^5.1"
+        "laravelcollective/html": "^5.2",
+        "illuminate/support": "^5.2"
     },
     "autoload": {
         "psr-4": {
