@@ -73,7 +73,10 @@ class BootstrapFormBuilder extends FormBuilder
      */
     public function input($type, $name, $value = null, $options = [])
     {
-        $options = $this->appendClassToOptions('form-control', $options);
+        // https://github.com/twbs/bootlint/wiki/E042
+        if (!in_array($type, ['file', 'range', 'image', 'button', 'submit', 'checkbox', 'radio', 'hidden'])) {
+            $options = $this->appendClassToOptions('form-control', $options);
+        }
         // Call the parent input method so that Laravel can handle
         // the rest of the input set up.
         return parent::input($type, $name, $value, $options);
