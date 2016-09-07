@@ -39,7 +39,7 @@ class BootstrapFormBuilder extends FormBuilder
         }
         // If a label is given, we set it up here. Otherwise, we will just
         // set it to an empty string.
-        $label = $label ? $this->label($name, $label) : '';
+        $label = $label ? $this->label($name, $label, ['class' => 'control-label']) : '';
 
         return '<div' . $this->html->attributes($options) . '>' . $label;
     }
